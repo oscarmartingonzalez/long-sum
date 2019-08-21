@@ -2,6 +2,8 @@
 
 namespace MyPrj\Utils;
 
+use MyPrj\Utils\IntSequenceNode;
+
 class IntSequence
 {
     /**

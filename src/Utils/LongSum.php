@@ -2,6 +2,8 @@
 
 namespace MyPrj\Utils;
 
+use MyPrj\Utils\IntSequence;
+
 class LongSum
 {
     /**
