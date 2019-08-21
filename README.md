@@ -1,4 +1,4 @@
-# long-sum
+# LongSum
 A PHP class to sum very long numbers.
 
 Example:
