@@ -2,7 +2,7 @@
 
 namespace MyPrj\Utils;
 
-class MyLong
+class LongSum
 {
     /**
      * @param string $num1

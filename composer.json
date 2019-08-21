@@ -1,6 +1,6 @@
 {
     "name": "elmao79/long-sum",
-    "description": "An example showing how to sum very long numbers.",
+    "description": "A PHP class to sum very long numbers.",
     "license": "MIT",
     "authors": [
         {
