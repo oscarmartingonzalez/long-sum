@@ -37,7 +37,10 @@ class IntSequence
         }
     }
 
-    public function getValueAsString()
+    /**
+     * @return string
+     */
+    public function getValueAsString(): string
     {
         $str = '';
 
@@ -58,7 +61,10 @@ class IntSequence
         return $this->getValueAsString();
     }
 
-    public function reverse()
+    /**
+     * @return IntSequence
+     */
+    public function reverse(): IntSequence
     {
         return new IntSequence(strrev($this->getValueAsString()));
     }
@@ -78,12 +84,18 @@ class IntSequence
         return $length;
     }
 
-    public function getFirstNode()
+    /**
+     * @return IntSequenceNode
+     */
+    public function getFirstNode(): IntSequenceNode
     {
         return $this->firstNode;
     }
 
-    public function getLastNode()
+    /**
+     * @return IntSequenceNode
+     */
+    public function getLastNode(): IntSequenceNode
     {
         $node = $this->firstNode;
         while (!is_null($node) && !is_null($node->nextNode)) {
