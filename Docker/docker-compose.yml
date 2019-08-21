@@ -1,0 +1,13 @@
+
+version: '3'
+services:
+    php:
+        build:
+            context: ./php
+            args:
+                - APP_DIR=${APP_DIR}
+        image: php-long-sum
+        container_name: php-long-sum
+        volumes:
+            - ../:${APP_DIR}
+        tty: true
