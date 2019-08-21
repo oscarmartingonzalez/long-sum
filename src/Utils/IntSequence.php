@@ -13,9 +13,9 @@ class IntSequence
      */
     private $firstNode;
 
-    public function __construct(string $value)
+    public function __construct(string $value = null)
     {
-        $this->value = $value;
+        $this->value = !is_null($value) ? $value : '';
         $this->build();
     }
 
@@ -56,5 +56,53 @@ class IntSequence
     public function __toString(): string
     {
         return $this->getValueAsString();
+    }
+
+    public function reverse()
+    {
+        return new IntSequence(strrev($this->getValueAsString()));
+    }
+
+    /**
+     * @return int
+     */
+    public function length(): int
+    {
+        $length = 0;
+        $tmpNode = $this->firstNode;
+        while (!is_null($tmpNode)) {
+            $length += 1;
+            $tmpNode = $tmpNode->nextNode;
+        }
+
+        return $length;
+    }
+
+    public function getFirstNode()
+    {
+        return $this->firstNode;
+    }
+
+    public function getLastNode()
+    {
+        $node = $this->firstNode;
+        while (!is_null($node) && !is_null($node->nextNode)) {
+            $node = $node->nextNode;
+        }
+
+        return $node;
+    }
+
+    /**
+     * @param int $value
+     */
+    public function add(int $value)
+    {
+        $node = new IntSequenceNode($value);
+        if (is_null($this->firstNode)) {
+            $this->firstNode = $node;
+        } else {
+            $this->getLastNode()->nextNode = $node;
+        }
     }
 }
