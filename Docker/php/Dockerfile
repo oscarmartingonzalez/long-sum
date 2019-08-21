@@ -13,4 +13,4 @@ ENV PATH ${PATH}:${APP_DIR}/vendor/bin
 
 COPY custom-php.ini /usr/local/etc/php/conf.d/
 
-WORKDIR /var/www
+WORKDIR ${APP_DIR}
