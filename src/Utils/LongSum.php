@@ -31,8 +31,8 @@ class LongSum
             $sumToNext = intdiv($partialSum, 10);
             $sumRest = $partialSum % 10;
             $intSequenceResult->add($sumRest);
-            $node1 = $node1->nextNode;
-            $node2 = $node2->nextNode;
+            $node1 = !is_null($node1) ? $node1->nextNode : null;
+            $node2 = !is_null($node2) ? $node2->nextNode : null;
         }
         if ($sumToNext > 0) {
             $intSequenceResult->add($sumToNext);
